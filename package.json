@@ -1,0 +1,53 @@
+{
+  "name": "@tingswap/v3-sdk",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "version": "1.0.0",
+  "description": "⚒️ An SDK for building applications on top of Tingswap V3",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": "https://github.com/Tingxswap/v3-sdk.git",
+  "keywords": [
+    "tingswap",
+    "hela"
+  ],
+  "module": "dist/v3-sdk.esm.js",
+  "scripts": {
+    "build": "tsdx build",
+    "start": "tsdx watch",
+    "test": "tsdx test",
+    "prepublishOnly": "tsdx build"
+  },
+  "dependencies": {
+    "@ethersproject/abi": "^5.0.12",
+    "@ethersproject/solidity": "^5.0.9",
+    "@tingswap/sdk-core": "^1.0.0",
+    "@tingswap/v3-periphery": "^1.0.0",
+    "tiny-invariant": "^1.1.0",
+    "tiny-warning": "^1.0.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.25",
+    "@tingswap/v3-core": "1.0.2",
+    "tsdx": "^0.14.1"
+  },
+  "resolutions": {
+    "regenerator-runtime": "^0.14.1"
+  },
+  "resolutionsComments": {
+    "regenerator-runtime": "Fixes https://github.com/facebook/regenerator/pull/480. It can be removed when `tsdx` updates their dependencies."
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "semi": false,
+    "singleQuote": true
+  }
+}
